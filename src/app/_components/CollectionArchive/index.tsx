@@ -43,7 +43,7 @@ export const CollectionArchive: React.FC<Props> = props => {
     relationTo,
     showPageRange,
     onResultChange,
-    limit = 1,
+    limit = 10,
     populatedDocs,
     populatedDocsTotal,
   } = props

@@ -1,23 +1,24 @@
 import React from 'react'
+import Link from 'next/link'
+
+import { Category } from '../../../payload/payload-types'
+// import CategoryCard from './CategoryCard'
 
 import classes from './index.module.scss'
-import Link from 'next/link'
-import { Category } from '../../../payload/payload-types'
 import CategoryCard from './CategoryCard'
 
-const Categories = ({ categories }: {categories: Category[] }) => {
+const Categories = ({ categories }: { categories: Category[] }) => {
   return (
     <section className={classes.container}>
       <div className={classes.titleWrapper}>
-        <h2>Our Pricing</h2>
-        <Link href="/">Show All</Link>
+        <h3>Our Pricing</h3>
+        <Link href="/products">Show All</Link>
       </div>
 
       <div className={classes.list}>
-        {categories.map((category) => (
-          <CategoryCard key={category.id}
-          category={category} />
-        ))}
+        {categories.map(category => {
+          return <CategoryCard key={category.id} category={category} />
+        })}
       </div>
     </section>
   )

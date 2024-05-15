@@ -12,7 +12,7 @@
 }
 
 .heroWrapper {
-  background-color: var(--color-dark-500); //changes background image
+  background-color: var(--color-dark-500);
   width: 100%;
   max-width: 1560px;
   max-height: 884px;
@@ -83,7 +83,7 @@
   flex-wrap: wrap;
   margin: calc(var(--base) * -0.5);
 
-  & > * {
-    margin: calc(var(--base) / 2);
-  }
+  // & > * {
+  //   margin: calc(var(--base) / 2);
+  // }
 }
